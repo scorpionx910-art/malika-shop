@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malika shop — Женская одежда</title>
+  <meta name="description" content="Malika shop — магазин женской одежды. Платья, футболки, платки, брюки и куртки. Туркменабат, ТЦ Bahar söwda merkezi, магазин A59. Цены в TMT и USD." />
+  <meta property="og:title" content="Malika shop — Женская одежда" />
+  <meta property="og:description" content="Платья, футболки, платки, брюки и куртки. Быстрый заказ через WhatsApp, imo, Telegram и Instagram." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2318181b'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23ffffff'%3EM%3C/text%3E%3C/svg%3E" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ClothingStore",
+      "name": "Malika shop",
+      "description": "Магазин женской одежды: платья, футболки, платки, брюки, куртки.",
+      "telephone": "+905369518044",
+      "currenciesAccepted": "TMT, USD",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ТЦ Bahar söwda merkezi, магазин A59",
+        "addressLocality": "Туркменабат",
+        "addressCountry": "TM"
+      },
+      "sameAs": [
+        "https://t.me/malika_05i",
+        "https://www.instagram.com/nazarowasalamat93/"
+      ]
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #faf9f6;
+      color: #18181b;
+      line-height: 1.45;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e4e4e7;
+      padding: 12px 16px;
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .top-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: #18181b;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 20px;
+      color: #18181b;
+    }
+    .sub {
+      font-size: 12px;
+      color: #71717a;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+    .btn {
+      border: 1px solid #d4d4d8;
+      background: #fff;
+      color: #18181b;
+      padding: 7px 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:hover {
+      background: #f4f4f5;
+    }
+    .btn-dark {
+      background: #18181b;
+      color: #fff;
+      border-color: #18181b;
+    }
+    .btn-dark:hover {
+      background: #27272a;
+    }
+    .btn-wa {
+      background: #16a34a;
+      color: #fff;
+      border-color: #16a34a;
+    }
+    .btn-wa:hover {
+      background: #15803d;
+    }
+    .btn-imo {
+      background: #0284c7;
+      color: #fff;
+      border-color: #0284c7;
+    }
+    .btn-imo:hover {
+      background: #0369a1;
+    }
+    .cats {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-top: 10px;
+    }
+    .cat-btn {
+      border: none;
+      background: #f4f4f5;
+      color: #27272a;
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .cat-btn.active {
+      background: #18181b;
+      color: #fff;
+    }
+    .hero {
+      margin: 20px 0;
+      background: #18181b;
+      color: #fff;
+      border-radius: 24px;
+      padding: 26px;
+    }
+    .hero h1 {
+      margin: 6px 0 10px;
+      font-size: 28px;
+    }
+    .hero p {
+      margin: 0;
+      color: #d4d4d8;
+      font-size: 14px;
+      max-width: 720px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e4e4e7;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      background: #f4f4f5;
+      display: block;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .card-cat {
+      font-size: 11px;
+      color: #71717a;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+    .price-main {
+      font-size: 17px;
+      font-weight: 700;
+    }
+    .price-sub {
+      font-size: 12px;
+      color: #71717a;
+      margin-left: 6px;
+    }
+    .card-desc {
+      font-size: 12px;
+      color: #52525b;
+      margin: 8px 0;
+    }
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 8px;
+    }
+    .sz {
+      font-size: 11px;
+      background: #f4f4f5;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .card-foot {
+      padding: 0 15px 15px;
+      display: flex;
+      gap: 6px;
+    }
+    footer {
+      background: #09090b;
+      color: #d4d4d8;
+      padding: 30px 16px;
+      font-size: 13px;
+    }
+    .modal-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background: rgba(0, 0, 0, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      overflow-y: auto;
+    }
+    .modal-box {
+      background: #fff;
+      color: #18181b;
+      width: 100%;
+      max-width: 660px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 22px;
+      padding: 20px;
+    }
+    .field {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #d4d4d8;
+      border-radius: 10px;
+      font-size: 13px;
+      margin-bottom: 10px;
+      background: #fff;
+    }
+    .row-item {
+      border: 1px solid #e4e4e7;
+      border-radius: 14px;
+      padding: 11px;
+      margin-bottom: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .toast {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #18181b;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    (function () {
+      var KEY_CFG = 'malika_cfg_v1';
+      var KEY_PROD = 'malika_prod_v1';
+      var KEY_PIN = 'malika_pin_v1';
+
+      var DEFAULT_CFG = {
+        storeName: 'Malika shop',
+        tagline: 'Женская одежда · Туркменабат, Bahar söwda merkezi, A59',
+        whatsapp: '905369518044',
+        imoPhone: '905369518044',
+        telegram: 'malika_05i',
+        instagram: 'nazarowasalamat93',
+        address: 'г. Туркменабат, ТЦ Bahar söwda merkezi, магазин A59',
+        hours: 'Ежедневно с 09:00 до 20:00',
+        rate: 19.5,
+        currency: 'TMT'
+      };
+
+      var DEFAULT_PROD = [
+        {
+          id: '1',
+          name: 'Платье миди из сатина',
+          category: 'Платья',
+          priceTmt: 890,
+          sizes: ['S', 'M', 'L'],
+          inStock: true,
+          desc: 'Аккуратная посадка и мягкая ткань на каждый день и выход.',
+          img: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80'
+        },
+        {
+          id: '2',
+          name: 'Базовая футболка свободного кроя',
+          category: 'Футболки',
+          priceTmt: 260,
+          sizes: ['XS', 'S', 'M', 'L', 'XL'],
+          inStock: true,
+          desc: 'Плотный приятный хлопок, хорошо держит форму.',
+          img: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80'
+        },
+        {
+          id: '3',
+          name: 'Шёлковый платок с узором',
+          category: 'Платки',
+          priceTmt: 220,
+          sizes: ['One Size'],
+          inStock: true,
+          desc: 'Лёгкий платок для головы, шеи или сумки.',
+          img: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80'
+        },
+        {
+          id: '4',
+          name: 'Брюки палаццо с высокой посадкой',
+          category: 'Брюки',
+          priceTmt: 640,
+          sizes: ['S', 'M', 'L', 'XL'],
+          inStock: true,
+          desc: 'Свободный крой и комфортная посадка.',
+          img: 'https://images.unsplash.com/photo-1594633312681-425c7b81e100?auto=format&fit=crop&w=800&q=80'
+        },
+        {
+          id: '5',
+          name: 'Укороченная куртка',
+          category: 'Куртки',
+          priceTmt: 1150,
+          sizes: ['S', 'M', 'L'],
+          inStock: true,
+          desc: 'Практичная модель на прохладную погоду.',
+          img: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80'
+        }
+      ];
+
+      var CATEGORIES = ['Все модели', 'Платья', 'Футболки', 'Платки', 'Брюки', 'Куртки'];
+      var FALLBACK = 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80';
+
+      function load(key, fb) {
+        try {
+          var raw = localStorage.getItem(key);
+          return raw ? JSON.parse(raw) : fb;
+        } catch (e) {
+          return fb;
+        }
+      }
+
+      function save(key, val) {
+        try {
+          localStorage.setItem(key, JSON.stringify(val));
+        } catch (e) {}
+      }
+
+      var state = {
+        cfg: Object.assign({}, DEFAULT_CFG, load(KEY_CFG, {})),
+        prod: load(KEY_PROD, DEFAULT_PROD),
+        cat: 'Все модели',
+        search: '',
+        modalProdId: null,
+        selectedSize: 'M',
+        ownerOpen: false,
+        ownerAuth: false,
+        pinErr: '',
+        ownerTab: 'list',
+        newName: '',
+        newCat: 'Платья',
+        newPrice: '',
+        newCurr: 'TMT',
+        newImg: '',
+        newDesc: '',
+        orderBox: null,
+        toast: ''
+      };
+
+      function esc(s) {
+        return String(s || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      function showToast(msg) {
+        state.toast = msg;
+        draw();
+        setTimeout(function () {
+          state.toast = '';
+          draw();
+        }, 2500);
+      }
+
+      function pricePair(tmt) {
+        var n = Number(tmt) || 0;
+        var rate = Number(state.cfg.rate) || 19.5;
+        var usd = (n / rate).toFixed(2);
+        if (state.cfg.currency === 'USD') {
+          return { main: '$' + usd, sub: Math.round(n) + ' TMT' };
+        }
+        return { main: Math.round(n) + ' TMT', sub: '$' + usd };
+      }
+
+      function makeOrderText(p, sz) {
+        var pr = pricePair(p.priceTmt);
+        return 'Здравствуйте! Хочу заказать в ' + state.cfg.storeName + ':\n• Модель: ' + p.name + '\n• Размер: ' + sz + '\n• Цена: ' + pr.main + ' (' + pr.sub + ')';
+      }
+
+      function openOrder(channel, p, sz) {
+        var txt = makeOrderText(p, sz);
+        var url = 'https://www.whatsapp.com/';
+        var label = '+' + state.cfg.whatsapp;
+        if (channel === 'whatsapp') {
+          url = 'https://api.whatsapp.com/send?phone=' + state.cfg.whatsapp + '&text=' + encodeURIComponent(txt);
+          label = '+' + state.cfg.whatsapp;
+        } else if (channel === 'imo') {
+          url = 'https://imo.im/';
+          label = '+' + state.cfg.imoPhone;
+        } else if (channel === 'telegram') {
+          url = 'https://t.me/' + state.cfg.telegram.replace(/^@/, '');
+          label = '@' + state.cfg.telegram.replace(/^@/, '');
+        } else if (channel === 'instagram') {
+          url = 'https://www.instagram.com/' + state.cfg.instagram.replace(/^@/, '') + '/';
+          label = '@' + state.cfg.instagram.replace(/^@/, '');
+        }
+        state.orderBox = { channel: channel, label: label, text: txt, url: url };
+        draw();
+      }
+
+      function draw() {
+        var root = document.getElementById('root');
+        if (!root) return;
+
+        var list = state.prod.filter(function (p) {
+          var okCat = state.cat === 'Все модели' || p.category === state.cat;
+          var q = state.search.trim().toLowerCase();
+          var okQ = !q || p.name.toLowerCase().indexOf(q) !== -1 || p.category.toLowerCase().indexOf(q) !== -1;
+          return okCat && okQ;
+        });
+
+        var html = '' +
+          '<header>' +
+            '<div class="wrap">' +
+              '<div class="top-row">' +
+                '<div class="brand">' +
+                  '<div class="logo">M</div>' +
+                  '<div>' +
+                    '<div class="title">' + esc(state.cfg.storeName) + '</div>' +
+                    '<div class="sub">' + esc(state.cfg.tagline) + '</div>' +
+                  '</div>' +
+                '</div>' +
+                '<div class="actions">' +
+                  '<button class="btn ' + (state.cfg.currency === 'TMT' ? 'btn-dark' : '') + '" data-act="cur" data-val="TMT">TMT</button>' +
+                  '<button class="btn ' + (state.cfg.currency === 'USD' ? 'btn-dark' : '') + '" data-act="cur" data-val="USD">$ USD</button>' +
+                  '<button class="btn btn-wa" data-act="quick" data-ch="whatsapp">WhatsApp</button>' +
+                  '<button class="btn btn-imo" data-act="quick" data-ch="imo">imo</button>' +
+                  '<button class="btn" data-act="owner">Панель владельца</button>' +
+                '</div>' +
+              '</div>' +
+              '<div class="cats">' +
+                CATEGORIES.map(function (c) {
+                  return '<button class="cat-btn ' + (state.cat === c ? 'active' : '') + '" data-act="cat" data-val="' + esc(c) + '">' + esc(c) + '</button>';
+                }).join('') +
+              '</div>' +
+            '</div>' +
+          '</header>' +
+          '<main class="wrap">' +
+            '<div class="hero">' +
+              '<div class="sub" style="color:#a1a1aa">' + esc(state.cfg.address) + '</div>' +
+              '<h1>Женская одежда ' + esc(state.cfg.storeName) + '</h1>' +
+              '<p>Платья, футболки, платки, брюки и куртки. Выбирайте модель, размер и пишите напрямую в WhatsApp, imo, Telegram или Instagram.</p>' +
+            '</div>' +
+            '<div class="toolbar">' +
+              '<input id="qInput" class="field" style="margin:0;max-width:340px" value="' + esc(state.search) + '" placeholder="Поиск по каталогу..." />' +
+              '<div class="sub">Найдено моделей: ' + list.length + '</div>' +
+            '</div>' +
+            '<div class="grid">' +
+              list.map(function (p) {
+                var pr = pricePair(p.priceTmt);
+                return '' +
+                  '<div class="card">' +
+                    '<div>' +
+                      '<img src="' + esc(p.img || FALLBACK) + '" alt="' + esc(p.name) + '" onerror="this.onerror=null;this.src=\'' + FALLBACK + '\'" />' +
+                      '<div class="card-body">' +
+                        '<div class="card-cat">' + esc(p.category) + (p.inStock ? ' · В наличии' : ' · Нет в наличии') + '</div>' +
+                        '<h2 class="card-title">' + esc(p.name) + '</h2>' +
+                        '<div><span class="price-main">' + esc(pr.main) + '</span><span class="price-sub">' + esc(pr.sub) + '</span></div>' +
+                        '<div class="card-desc">' + esc(p.desc) + '</div>' +
+                        '<div class="sizes">' + p.sizes.map(function (s) { return '<span class="sz">' + esc(s) + '</span>'; }).join('') + '</div>' +
+                      '</div>' +
+                    '</div>' +
+                    '<div class="card-foot">' +
+                      '<button class="btn btn-dark" style="flex:1" data-act="openp" data-id="' + esc(p.id) + '">Заказать</button>' +
+                      '<button class="btn btn-wa" data-act="ordcard" data-ch="whatsapp" data-id="' + esc(p.id) + '">WA</button>' +
+                      '<button class="btn btn-imo" data-act="ordcard" data-ch="imo" data-id="' + esc(p.id) + '">imo</button>' +
+                    '</div>' +
+                  '</div>';
+              }).join('') +
+            '</div>' +
+          '</main>' +
+          '<footer>' +
+            '<div class="wrap">' +
+              '<div style="font-size:18px;font-weight:bold;color:#fff;margin-bottom:6px">' + esc(state.cfg.storeName) + '</div>' +
+              '<div>' + esc(state.cfg.address) + ' · ' + esc(state.cfg.hours) + '</div>' +
+              '<div style="margin-top:8px">WhatsApp / imo: +' + esc(state.cfg.whatsapp) + ' · Telegram: @' + esc(state.cfg.telegram) + ' · Instagram: @' + esc(state.cfg.instagram) + '</div>' +
+            '</div>' +
+          '</footer>';
+
+        if (state.modalProdId) {
+          var curP = state.prod.find(function (x) { return x.id === state.modalProdId; });
+          if (curP) {
+            var activeSz = curP.sizes.indexOf(state.selectedSize) !== -1 ? state.selectedSize : curP.sizes[0];
+            html += '' +
+              '<div class="modal-bg" data-act="closem">' +
+                '<div class="modal-box" data-stop="1">' +
+                  '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">' +
+                    '<h3 style="margin:0;font-size:20px">' + esc(curP.name) + '</h3>' +
+                    '<button class="btn" data-act="closem">✕</button>' +
+                  '</div>' +
+                  '<div style="margin-bottom:10px;font-weight:bold">' + esc(pricePair(curP.priceTmt).main) + ' (' + esc(pricePair(curP.priceTmt).sub) + ')</div>' +
+                  '<div style="font-size:12px;margin-bottom:6px;font-weight:600">Выберите размер:</div>' +
+                  '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px">' +
+                    curP.sizes.map(function (s) {
+                      return '<button class="btn ' + (s === activeSz ? 'btn-dark' : '') + '" data-act="sz" data-val="' + esc(s) + '">' + esc(s) + '</button>';
+                    }).join('') +
+                  '</div>' +
+                  '<div style="display:flex;flex-wrap:wrap;gap:8px">' +
+                    '<button class="btn btn-wa" data-act="ordm" data-ch="whatsapp" data-id="' + esc(curP.id) + '">Заказать в WhatsApp</button>' +
+                    '<button class="btn btn-imo" data-act="ordm" data-ch="imo" data-id="' + esc(curP.id) + '">Заказать в imo</button>' +
+                    '<button class="btn btn-dark" data-act="ordm" data-ch="telegram" data-id="' + esc(curP.id) + '">Telegram</button>' +
+                    '<button class="btn" data-act="ordm" data-ch="instagram" data-id="' + esc(curP.id) + '">Instagram</button>' +
+                  '</div>' +
+                '</div>' +
+              '</div>';
+          }
+        }
+
+        if (state.orderBox) {
+          html += '' +
+            '<div class="modal-bg" data-act="closeord">' +
+              '<div class="modal-box" data-stop="1">' +
+                '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">' +
+                  '<h3 style="margin:0;font-size:18px">Отправка заказа (' + esc(state.orderBox.label) + ')</h3>' +
+                  '<button class="btn" data-act="closeord">✕</button>' +
+                '</div>' +
+                '<textarea class="field" rows="5" readonly>' + esc(state.orderBox.text) + '</textarea>' +
+                '<div style="display:flex;gap:8px;flex-wrap:wrap">' +
+                  '<a class="btn btn-dark" style="text-decoration:none" href="' + esc(state.orderBox.url) + '" target="_blank" rel="noopener">Открыть чат</a>' +
+                  '<button class="btn" data-act="closeord">Закрыть</button>' +
+                '</div>' +
+              '</div>' +
+            '</div>';
+        }
+
+        if (state.ownerOpen) {
+          var savedPin = load(KEY_PIN, '0505');
+          if (!state.ownerAuth) {
+            html += '' +
+              '<div class="modal-bg" data-act="closeown">' +
+                '<div class="modal-box" style="max-width:380px" data-stop="1">' +
+                  '<h3 style="margin:0 0 8px">Панель владельца</h3>' +
+                  '<div class="sub" style="margin-bottom:10px">PIN по умолчанию: 0505</div>' +
+                  '<input id="pinField" type="password" class="field" placeholder="Введите PIN" />' +
+                  (state.pinErr ? '<div style="color:#dc2626;font-size:12px;margin-bottom:8px">' + esc(state.pinErr) + '</div>' : '') +
+                  '<div style="display:flex;gap:8px">' +
+                    '<button class="btn btn-dark" data-act="checkpin" data-right="' + esc(savedPin) + '">Войти</button>' +
+                    '<button class="btn" data-act="closeown">Отмена</button>' +
+                  '</div>' +
+                '</div>' +
+              '</div>';
+          } else {
+            html += '' +
+              '<div class="modal-bg" data-act="closeown">' +
+                '<div class="modal-box" data-stop="1">' +
+                  '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">' +
+                    '<h3 style="margin:0">Управление каталогом</h3>' +
+                    '<button class="btn" data-act="closeown">Закрыть</button>' +
+                  '</div>' +
+                  '<div style="display:flex;gap:8px;margin-bottom:14px">' +
+                    '<button class="btn ' + (state.ownerTab === 'list' ? 'btn-dark' : '') + '" data-act="otab" data-val="list">Товары (' + state.prod.length + ')</button>' +
+                    '<button class="btn ' + (state.ownerTab === 'cfg' ? 'btn-dark' : '') + '" data-act="otab" data-val="cfg">Контакты и курс</button>' +
+                  '</div>';
+
+            if (state.ownerTab === 'list') {
+              html += '' +
+                '<div style="background:#f4f4f5;padding:12px;border-radius:14px;margin-bottom:14px">' +
+                  '<div style="font-weight:bold;font-size:13px;margin-bottom:8px">Добавить товар</div>' +
+                  '<input id="nName" class="field" value="' + esc(state.newName) + '" placeholder="Название модели" />' +
+                  '<div style="display:flex;gap:8px">' +
+                    '<select id="nCat" class="field">' +
+                      CATEGORIES.slice(1).map(function (c) {
+                        return '<option value="' + esc(c) + '" ' + (state.newCat === c ? 'selected' : '') + '>' + esc(c) + '</option>';
+                      }).join('') +
+                    '</select>' +
+                    '<input id="nPrice" type="number" class="field" value="' + esc(state.newPrice) + '" placeholder="Цена" />' +
+                    '<select id="nCurr" class="field" style="max-width:95px">' +
+                      '<option value="TMT" ' + (state.newCurr === 'TMT' ? 'selected' : '') + '>TMT</option>' +
+                      '<option value="USD" ' + (state.newCurr === 'USD' ? 'selected' : '') + '>USD</option>' +
+                    '</select>' +
+                  '</div>' +
+                  '<input id="nImg" class="field" value="' + esc(state.newImg) + '" placeholder="Ссылка на фото (или выберите файл ниже)" />' +
+                  '<input type="file" accept="image/*" id="nFile" style="margin-bottom:10px;font-size:12px" />' +
+                  '<input id="nDesc" class="field" value="' + esc(state.newDesc) + '" placeholder="Короткое описание" />' +
+                  '<button class="btn btn-dark" data-act="addprod">+ Добавить товар</button>' +
+                '</div>' +
+                state.prod.map(function (p) {
+                  return '' +
+                    '<div class="row-item">' +
+                      '<div>' +
+                        '<div style="font-weight:bold;font-size:13px">' + esc(p.name) + '</div>' +
+                        '<div class="sub">' + esc(p.category) + ' · ' + esc(pricePair(p.priceTmt).main) + '</div>' +
+                      '</div>' +
+                      '<div style="display:flex;gap:6px">' +
+                        '<button class="btn" data-act="stock" data-id="' + esc(p.id) + '">' + (p.inStock ? 'В наличии' : 'Нет в наличии') + '</button>' +
+                        '<button class="btn" data-act="del" data-id="' + esc(p.id) + '">Удалить</button>' +
+                      '</div>' +
+                    '</div>';
+                }).join('');
+            } else {
+              html += '' +
+                '<div class="sub">WhatsApp / imo</div>' +
+                '<input id="cWa" class="field" value="' + esc(state.cfg.whatsapp) + '" />' +
+                '<div class="sub">Telegram (без @)</div>' +
+                '<input id="cTg" class="field" value="' + esc(state.cfg.telegram) + '" />' +
+                '<div class="sub">Instagram (без @)</div>' +
+                '<input id="cIg" class="field" value="' + esc(state.cfg.instagram) + '" />' +
+                '<div class="sub">Адрес</div>' +
+                '<input id="cAdr" class="field" value="' + esc(state.cfg.address) + '" />' +
+                '<div class="sub">Курс 1 USD в TMT</div>' +
+                '<input id="cRate" type="number" step="0.1" class="field" value="' + esc(state.cfg.rate) + '" />' +
+                '<button class="btn btn-dark" data-act="savecfg">Сохранить настройки</button>';
+            }
+
+            html += '</div></div>';
+          }
+        }
+
+        if (state.toast) {
+          html += '<div class="toast">' + esc(state.toast) + '</div>';
+        }
+
+        root.innerHTML = html;
+      }
+
+      document.addEventListener('click', function (e) {
+        var stop = e.target.closest('[data-stop="1"]');
+        var el = e.target.closest('[data-act]');
+        if (!el) return;
+        var act = el.dataset.act;
+        if (stop && (act === 'closem' || act === 'closeord' || act === 'closeown')) {
+          if (e.target !== el) return;
+        }
+
+        if (act === 'cur') {
+          state.cfg.currency = el.dataset.val;
+          save(KEY_CFG, state.cfg);
+          draw();
+        } else if (act === 'cat') {
+          state.cat = el.dataset.val;
+          draw();
+        } else if (act === 'openp') {
+          state.modalProdId = el.dataset.id;
+          state.selectedSize = 'M';
+          draw();
+        } else if (act === 'closem') {
+          state.modalProdId = null;
+          draw();
+        } else if (act === 'sz') {
+          state.selectedSize = el.dataset.val;
+          draw();
+        } else if (act === 'ordcard') {
+          var p1 = state.prod.find(function (x) { return x.id === el.dataset.id; });
+          if (p1) openOrder(el.dataset.ch, p1, p1.sizes[0] || 'M');
+        } else if (act === 'ordm') {
+          var p2 = state.prod.find(function (x) { return x.id === el.dataset.id; });
+          if (p2) openOrder(el.dataset.ch, p2, state.selectedSize || p2.sizes[0] || 'M');
+        } else if (act === 'quick') {
+          var dummy = { name: 'Запрос по каталогу', priceTmt: 0, sizes: ['M'] };
+          openOrder(el.dataset.ch, dummy, 'M');
+        } else if (act === 'closeord') {
+          state.orderBox = null;
+          draw();
+        } else if (act === 'owner') {
+          state.ownerOpen = true;
+          state.pinErr = '';
+          draw();
+        } else if (act === 'closeown') {
+          state.ownerOpen = false;
+          draw();
+        } else if (act === 'checkpin') {
+          var inp = document.getElementById('pinField');
+          if (inp && inp.value.trim() === el.dataset.right) {
+            state.ownerAuth = true;
+            state.pinErr = '';
+            draw();
+          } else {
+            state.pinErr = 'Неверный PIN (по умолчанию 0505)';
+            draw();
+          }
+        } else if (act === 'otab') {
+          state.ownerTab = el.dataset.val;
+          draw();
+        } else if (act === 'stock') {
+          state.prod = state.prod.map(function (x) {
+            return x.id === el.dataset.id ? Object.assign({}, x, { inStock: !x.inStock }) : x;
+          });
+          save(KEY_PROD, state.prod);
+          draw();
+          showToast('Статус обновлён');
+        } else if (act === 'del') {
+          state.prod = state.prod.filter(function (x) { return x.id !== el.dataset.id; });
+          save(KEY_PROD, state.prod);
+          draw();
+          showToast('Товар удалён');
+        } else if (act === 'addprod') {
+          var nName = ((document.getElementById('nName') || {}).value || '').trim();
+          var nCat = (document.getElementById('nCat') || {}).value || 'Платья';
+          var nPrice = Number(((document.getElementById('nPrice') || {}).value) || 0);
+          var nCurr = (document.getElementById('nCurr') || {}).value || 'TMT';
+          var nImg = ((document.getElementById('nImg') || {}).value || '').trim();
+          var nDesc = ((document.getElementById('nDesc') || {}).value || '').trim();
+          if (!nName || !(nPrice > 0)) {
+            showToast('Укажите название и цену');
+            return;
+          }
+          var rate = Number(state.cfg.rate) || 19.5;
+          var tmt = nCurr === 'USD' ? Math.round(nPrice * rate) : Math.round(nPrice);
+          state.prod.unshift({
+            id: String(Date.now()),
+            name: nName,
+            category: nCat,
+            priceTmt: tmt,
+            sizes: ['S', 'M', 'L'],
+            inStock: true,
+            desc: nDesc,
+            img: nImg || FALLBACK
+          });
+          state.newName = '';
+          state.newPrice = '';
+          state.newImg = '';
+          state.newDesc = '';
+          save(KEY_PROD, state.prod);
+          draw();
+          showToast('Товар добавлен');
+        } else if (act === 'savecfg') {
+          state.cfg.whatsapp = ((document.getElementById('cWa') || {}).value || '').replace(/\D/g, '');
+          state.cfg.imoPhone = state.cfg.whatsapp;
+          state.cfg.telegram = ((document.getElementById('cTg') || {}).value || '').replace(/^@/, '').trim();
+          state.cfg.instagram = ((document.getElementById('cIg') || {}).value || '').replace(/^@/, '').trim();
+          state.cfg.address = ((document.getElementById('cAdr') || {}).value || '').trim();
+          state.cfg.rate = Number(((document.getElementById('cRate') || {}).value) || 19.5) || 19.5;
+          save(KEY_CFG, state.cfg);
+          draw();
+          showToast('Настройки сохранены');
+        }
+      });
+
+      document.addEventListener('input', function (e) {
+        if (!e.target) return;
+        if (e.target.id === 'qInput') {
+          state.search = e.target.value;
+          draw();
+          var el = document.getElementById('qInput');
+          if (el) {
+            el.focus();
+            el.setSelectionRange(el.value.length, el.value.length);
+          }
+        } else if (e.target.id === 'nName') {
+          state.newName = e.target.value;
+        } else if (e.target.id === 'nPrice') {
+          state.newPrice = e.target.value;
+        } else if (e.target.id === 'nImg') {
+          state.newImg = e.target.value;
+        } else if (e.target.id === 'nDesc') {
+          state.newDesc = e.target.value;
+        }
+      });
+
+      document.addEventListener('change', function (e) {
+        if (e.target && e.target.id === 'nFile' && e.target.files && e.target.files[0]) {
+          var file = e.target.files[0];
+          var reader = new FileReader();
+          reader.onload = function (ev) {
+            var img = new Image();
+            img.onload = function () {
+              var canvas = document.createElement('canvas');
+              var w = img.width;
+              var h = img.height;
+              var max = 700;
+              if (w > max || h > max) {
+                if (w >= h) { h = Math.round(h * max / w); w = max; }
+                else { w = Math.round(w * max / h); h = max; }
+              }
+              canvas.width = w;
+              canvas.height = h;
+              canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+              state.newImg = canvas.toDataURL('image/jpeg', 0.72);
+              draw();
+              showToast('Фото загружено');
+            };
+            img.src = String(ev.target.result || '');
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      draw();
+    })();
+  </script>
+</body>
+</html>
